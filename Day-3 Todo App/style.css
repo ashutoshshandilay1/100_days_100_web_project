@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover{
+    transform: scale(1.02);
+}
+
+
+#inputbox{
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease , box-shadow 0.3s ease;
+}
+
+#inputbox:focus{
+    border-color: #64b3fb;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+#addtask{
+    background-color: #64b3fb;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease , transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#addtask:hover{
+    background-color: #519dc4;
+    transform: translateY(-2px);
+}
+
+#taskadd{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskadd li{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-wrap: break-word;
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease , box-shadow 0.3s ease;
+
+}
+
+#taskadd li:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#taskadd li span{
+    flex: 1;
+    margin: right;
+    color: #555;
+}
+
+
+#taskadd li button{
+    background-color: #64b3fb;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s ease , transform 0.2s ease;
+}
+
+#taskadd li button:hover{
+    background-color: #519dc4;
+    transform: scale(1.05);
+}
