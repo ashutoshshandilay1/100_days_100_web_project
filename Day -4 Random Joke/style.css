@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: headingAnimation 2s ease-out forwards;
+}
+
+
+button {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    outline: none;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: buttonAnimation 1s ease forwards;
+    transition: all 0.3s ease;
+}
+
+button:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+button:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+button:hover {
+    background-color: #ff4e50;
+    transform: scale(1.1);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+ul#jokesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    width: 80%;
+    max-width: 450px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+ul#jokesList li {
+    font-size: 1.1rem;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul#jokesList li:last-child {
+    border-bottom: none;
+}
+
+ul#jokesList li:hover {
+    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+@keyframes headingAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
